@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/52edb7c0e0.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="book-container">
@@ -17,30 +18,81 @@
 
     <section>
         <div class="book-display">
-    
-        </div>
+        
+            <div class="book-item" id="book">
+                    <div class="bookBTNS">
+                        <button class="bookBTN-one hvr-pop">Edit</button>
+                        <button class="bookBTN-two hvr-pop">Delete</button>
+                    </div>
+                    <div class="book-text">
+                        <h1>title</h1>
+                        <h1>Author</h1>
+                        <p class="pages"><span id="pages-read">4</span> <span id="total-pages">50</span></p>
+                    </div>
+                       
+                        <div class="delone-complete-plusone">
+                            <button class="delone">-</button>
+                            <button class="complete"><i class="fa-solid fa-check"></i></button>
+                            <button class="plusone">+</button>
+                        </div>
+            </div>
+            <div class="book-item  hvr-pulse-grow" id="add-book">
+                <i class="fa-solid fa-plus  "></i>
+            </div>
+        </div>  
 
 
         <div class="info-panel">
                 <div class="info">
                     <h1>Information</h1>
-                    <p class="infor-text"><span>Books </span>     <span>0</span> </p>
+                    <p class="infor-text "><span>Books </span>     <span>0</span> </p>
                     <p class="infor-text"> <span>Completed book</span>    <span>0</span></p>
                     <p class="infor-text"><span>Total pages </span>  <span>0</span> </p>
                     <p class="infor-text"><span>Pages read</span> <span>0</span> </p>
                 </div>
                 <div class="storage-options">
                         <h1>Storage options</h1>
-                        <button id="deleteBTN">Delete</button>
+                        <button id="deleteBTN" class="hvr-pulse-shrink">Delete</button>
                 </div>
         </div>
 
     </section>
 
-
+   
 </div>
+<div  class="modal-background">
+    
+</div>
+<div class="modal">
+    <h1>Total</h1>
+    <form action="/">
+        <div>
+            <label for="book-title">Title</label> 
+            <input  id="book-title" type="text"> 
+        </div>
+  
+        <div>   
+              <label for="book-author">Author</label>
+            <input  id="book-author" type="text"> </div>
+        <div>
+            <label for="book-pages-total">Total pages</label> 
+            <input  id="book-pages-total" type="text"> 
+    
+        </div>
+        <div>
 
-
+            <label for="book-pages-read">Pages read</label> 
+            <input  id="book-pages-read" type="text"> 
+        </div>
+   
+        <div class="modalBTNS">
+            <button class="modalBTN-cancel"> Cancel </button>
+            <button class="modalBTN-add"> ADD </button>
+        </div>
+    
+       
+    </form>
+</div>
 
 
 
