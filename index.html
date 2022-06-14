@@ -11,7 +11,6 @@
 <body>
     <div class="book-container">
 
- 
     <header>
         <h1 class="hvr-grow-rotate ">Library</h1>
     </header>
@@ -42,14 +41,13 @@
             </div>
         </div>  
 
-
         <div class="info-panel">
                 <div class="info">
                     <h1>Information</h1>
-                    <p class="infor-text "><span>Books </span>     <span>0</span> </p>
-                    <p class="infor-text"> <span>Completed book</span>    <span>0</span></p>
-                    <p class="infor-text"><span>Total pages </span>  <span>0</span> </p>
-                    <p class="infor-text"><span>Pages read</span> <span>0</span> </p>
+                    <p class="infor-text "><span>Books </span>     <span id="book-total"></span> </p>
+                    <p class="infor-text"> <span>Completed book</span>    <span id="complete-total"></span></p>
+                    <p class="infor-text"><span>Total pages </span>  <span id="page-total"></span> </p>
+                    <p class="infor-text"><span>Pages read</span> <span id="page-read" ></span> </p>
                 </div>
                 <div class="storage-options">
                         <h1>Storage options</h1>
@@ -65,34 +63,37 @@
     
 </div>
 <div class="modal">
-    <h1>Total</h1>
-    <form action="/">
+    <h1 id="allert-text"></h1>
+    <div class="form">
+
+ 
         <div>
-            <label for="book-title">Title</label> 
-            <input  id="book-title" type="text"> 
+            <label for="title">Title</label> 
+            <input  id="title" type="text"> 
         </div>
   
         <div>   
-              <label for="book-author">Author</label>
-            <input  id="book-author" type="text"> </div>
+              <label for="author">Author</label>
+            <input  id="author" type="text"> </div>
         <div>
-            <label for="book-pages-total">Total pages</label> 
-            <input  id="book-pages-total" type="text"> 
+            <label for="total" >Total pages</label> 
+            <input  id="total"  type="text"> 
     
         </div>
         <div>
 
-            <label for="book-pages-read">Pages read</label> 
-            <input  id="book-pages-read" type="text"> 
+            <label for="read">Pages read</label> 
+            <input  id="read" type="text"> 
         </div>
    
         <div class="modalBTNS">
             <button class="modalBTN-cancel"> Cancel </button>
             <button class="modalBTN-add"> ADD </button>
+            <button class="modalBTN-edit"> Edit</button>
         </div>
     
-       
-    </form>
+    </div>
+   
 </div>
 
 

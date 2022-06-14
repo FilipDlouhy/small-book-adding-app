@@ -1,7 +1,9 @@
 *{padding: 0;
 margin: 0;
 box-sizing: border-box;}
-
+body{
+    background-color: purple;
+}
 .book-container{
     height: 100vh;
     width: 100vw;
@@ -46,6 +48,8 @@ width: 100%;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    position: fixed;
+    right: 0;
 }
 .info{
 
@@ -109,6 +113,8 @@ border-bottom: 0.8px solid black;
 .book-display{
     display: flex;
     flex-wrap: wrap;
+    height: 100vh;
+    background-color: purple;
 
 }
 
@@ -125,7 +131,18 @@ border: 2px solid black;
 box-shadow: 5px 5px 15px 5px #000000;
 }
 
+#book-complete{
+    width: 300px;
+height: 400px;
+margin: 30px;
+background-color:rgb(59, 1, 52);
+display: flex;
+flex-direction: column;
+border-radius: 30px;
+border: 2px solid black;
 
+box-shadow: 5px 5px 15px 5px #000000;
+}
 
 
 .bookBTNS{
@@ -252,7 +269,7 @@ border: none;
     right: 0;
     bottom: 0;
     height: 100vh;
-  z-index: 1000;
+  z-index: -999;
     background-color: #000000;
     opacity:0;
     display: block;
@@ -268,7 +285,7 @@ border: none;
     position: fixed;
     left: 40%;
     top: 20%;
-    z-index:1000;
+    z-index:-1000;
     width: 500px;
     height: 500px;
     background-color: #01BAEF;
@@ -280,22 +297,24 @@ border: none;
 }
 .modal h1{
 padding: 5px;
-    font-size:4rem;
-    border-bottom: 1px solid white;
+    font-size:3rem;
+  
     width: 80%;
     margin: 0 auto;
     text-align: center;
+    height: 50px;
+    color: red;
 
 }
 
-.modal form{
+.modal .form{
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
     margin: 15px;
 }
-.modal form div{
+.modal .form div{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -309,7 +328,7 @@ padding: 5px;
 
 
 
-    .modal form div:last-of-type{
+    .modal .form div:last-of-type{
 border: none;
 display: flex;
 flex-direction: row;
@@ -321,7 +340,7 @@ align-items: center;
         font-size: 1.5rem;
         color: white;
         text-align: center;
-        width: 50%;
+        width: 33%;
         height: 50px;
         border: none;
         border-bottom-left-radius: 20px;
@@ -339,11 +358,10 @@ align-items: center;
         font-size: 1.5rem;
         color: white;
         text-align: center;
-        width: 50%;
+        width: 33%;
         height: 50px;
         border: none;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 20px;
+     
     }
 
     .modalBTN-add:hover{
@@ -351,14 +369,28 @@ align-items: center;
         transition: 0.3s;
         cursor: pointer;
     }
-
-
-form div label {
+    .modalBTN-edit{
+        background-color: #bf208f;
+        font-size: 1.5rem;
+        color: white;
+        text-align: center;
+        width: 33%;
+        height: 50px;
+        border: none;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .modalBTN-edit:hover{
+        opacity: 0.8;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+.form div label {
     font-size: 1.75rem;
 }
 
 
-form div input{
+.form div input{
     width: 70%;
     border-radius: 20px;
     background-color: blue;
@@ -370,7 +402,7 @@ form div input{
 font-size: 1rem;
 }
 
-form div input:hover, form div input:focus, form div input:active{
+.form div input:hover{
     border:none;
     width: 100%;
     transition: 0.4s;
@@ -404,7 +436,7 @@ cursor: pointer;
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   }
-  .hvr-pulse-grow:hover, .hvr-pulse-grow:focus, .hvr-pulse-grow:active {
+  .hvr-pulse-grow:hover {
     -webkit-animation-name: hvr-pulse-grow;
     animation-name: hvr-pulse-grow;
     -webkit-animation-duration: 0.3s;
@@ -438,7 +470,7 @@ cursor: pointer;
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   }
-  .hvr-pulse-shrink:hover, .hvr-pulse-shrink:focus, .hvr-pulse-shrink:active {
+  .hvr-pulse-shrink:hover{
     -webkit-animation-name: hvr-pulse-shrink;
     animation-name: hvr-pulse-shrink;
     -webkit-animation-duration: 0.3s;
@@ -465,7 +497,7 @@ cursor: pointer;
     -webkit-transition-property: transform;
     transition-property: transform;
   }
-  .hvr-grow-rotate:hover, .hvr-grow-rotate:focus, .hvr-grow-rotate:active {
+  .hvr-grow-rotate:hover  {
     -webkit-transform: scale(1.1) rotate(4deg);
     transform: scale(1.1) rotate(4deg);
   }
